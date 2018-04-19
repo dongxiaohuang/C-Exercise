@@ -12,5 +12,5 @@ main: main.o
 -include $(OBJ:.o=.d)
 
 clean:
-	rm -f main *.o
+	rm -f main *.o setcmp
 .PHONEY: clean
