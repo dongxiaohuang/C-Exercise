@@ -51,6 +51,7 @@ int main(int argc, char const *argv[]) {
     PRINT_ELEMENTS(coll1, "coll1: ");
 
     //just to make sure
+    //value_comp() : Returns the comparison criterion for values as a whole (same as key_comp())
     if(coll1.value_comp() == coll2.value_comp()){
         cout << "coll1 and coll2 have the same sorting criterion" << endl;
     }else{
