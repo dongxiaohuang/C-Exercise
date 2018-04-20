@@ -5,7 +5,8 @@
 class AlarmDoor : private Alarm{
     // because Alarmdoor is nit an Alarm
     //only use certain features of Alarm
-
+    // can still use public functions and of Alarm inside class but
+    // can not use them outside class
 private:
     /* data */
     int _code;
