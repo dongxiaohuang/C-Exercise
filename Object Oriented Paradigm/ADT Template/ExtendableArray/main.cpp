@@ -1,6 +1,8 @@
 #include "ExtendableArray.h"
 #include "SortedList.h"
 
+
+
 int main(int argc, char const *argv[]) {
         ExtendableArray<double> arr(5);
         arr.push_back (1.1);
@@ -37,10 +39,26 @@ int main(int argc, char const *argv[]) {
         cout << s1.indexOf('b') << endl;
         cout << s1.indexOf('z') << endl;
         cout << s1.indexOf('a') << endl;
+        cout << s1.indexOf('g') << endl;
 
         cout << s1.removeAt(4) << endl;
         cout << s1.removeAt(3);
         s1.print();
         cout << s1.get(3) << endl;
+
+        cout << endl <<  "=========Self defined Stucture===========" << endl;
+        //function name is a pointer
+        SortedList<Point, Point::comparePoint> slp(10, Point(-1,-1));
+        slp.add(Point(0,1));
+        slp.add(Point(0,2));
+        slp.add(Point(0,3));
+        slp.add(Point(2,3));
+        slp.add(Point(3,3));
+        cout << slp.count() <<endl;
+        slp.print();
+        cout << slp.get(3) << endl;
+        cout << slp.indexOf(Point(2,3)) << endl;
+        // TODO : fix bug of indexOf
+
         return 0;
 }
